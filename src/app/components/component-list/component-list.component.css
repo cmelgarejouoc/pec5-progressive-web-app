@@ -2,7 +2,7 @@
   opacity: 0.25;
 }
 .list-group {
-  max-height: 32rem;
+  max-height: 30rem;
   overflow-y: scroll;
   overflow-x: hidden;
 }
