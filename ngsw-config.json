@@ -37,7 +37,7 @@
       "name": "images-api",
       "urls": ["https://rickandmortyapi.com/**"],
       "cacheConfig": {
-        "maxSize": 10,
+        "maxSize": 50,
         "maxAge": "1h",
         "timeout": "1s",
         "strategy": "freshness"
