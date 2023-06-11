@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -15,6 +15,7 @@ import { CardComponent } from './components/card/card.component';
 import { ComponentDetailComponent } from './components/component-detail/component-detail.component';
 import { ComponentListComponent } from './components/component-list/component-list.component';
 import { GridComponent } from './components/grid/grid.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,12 @@ import { GridComponent } from './components/grid/grid.component';
     MatProgressSpinnerModule,
     MatExpansionModule,
     BrowserAnimationsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
