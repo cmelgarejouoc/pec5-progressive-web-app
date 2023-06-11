@@ -13,6 +13,7 @@
         (click)="changeView('card')"
         [disabled]="currentView === 'card'"
         [ngClass]="{ 'opacity-25': currentView === 'grid' }"
+        aria-label="View cards"
       >
         <mat-icon>view_module</mat-icon>
       </button>
@@ -22,6 +23,7 @@
         (click)="changeView('grid')"
         [disabled]="currentView === 'grid'"
         [ngClass]="{ 'opacity-25': currentView === 'card' }"
+        aria-label="View List"
       >
         <mat-icon>view_list</mat-icon>
       </button>
