@@ -16,12 +16,10 @@ export class ComponentListComponent implements OnInit {
 
   ngOnInit(): void {
     this.showSpinner = true;
-    setTimeout(() => {
-      this.imagesService.getAllImages().subscribe((images) => {
-        this.images = images;
-        this.showSpinner = false;
-      });
-    }, 100);
+    this.imagesService.getAllImages().subscribe((images) => {
+      this.images = images;
+      this.showSpinner = false;
+    });
   }
 
   changeView(view: string): void {
