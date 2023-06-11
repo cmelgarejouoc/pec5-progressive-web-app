@@ -22,7 +22,7 @@
     },
     {
       "name": "assets",
-      "installMode": "prefetch",
+      "installMode": "lazy",
       "updateMode": "prefetch",
       "resources": {
         "files": [
@@ -37,7 +37,7 @@
       "name": "images-api",
       "urls": ["https://rickandmortyapi.com/**"],
       "cacheConfig": {
-        "maxSize": 100,
+        "maxSize": 25,
         "maxAge": "1h",
         "timeout": "1s",
         "strategy": "freshness"
