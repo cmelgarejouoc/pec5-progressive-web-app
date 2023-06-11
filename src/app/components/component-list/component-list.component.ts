@@ -21,7 +21,7 @@ export class ComponentListComponent implements OnInit {
         this.images = images;
         this.showSpinner = false;
       });
-    }, 1000);
+    }, 100);
   }
 
   changeView(view: string): void {
