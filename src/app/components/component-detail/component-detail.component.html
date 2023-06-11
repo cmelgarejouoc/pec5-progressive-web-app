@@ -33,9 +33,9 @@
             </p>
             <p><strong>Status:</strong> {{ image.status }}</p>
             <p>
-              <strong>First appearance: <br /></strong>
+              <strong>First appearance: </strong>
               {{
-                image.episode?.[0] ?? "No episodes"
+                getEpisode(image.episode?.[0] ?? undefined)
               }}
             </p>
             <p><strong>Location:</strong> {{ image.location.name }}</p>

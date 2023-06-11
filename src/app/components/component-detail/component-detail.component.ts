@@ -33,4 +33,12 @@ export class ComponentDetailComponent implements OnInit {
       });
     }
   }
+
+  getEpisode(url: string | undefined): string {
+    const parsedUrl = url && new URL(url);
+    const episode = parsedUrl
+      ? parsedUrl.pathname.split('/').slice(-2).join('/')
+      : 'No episodes';
+    return episode;
+  }
 }
