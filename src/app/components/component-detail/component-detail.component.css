@@ -1,0 +1,36 @@
+.mat-expansion-panel {
+  background-color: transparent;
+  box-shadow: none;
+}
+.mat-expansion-panel-header {
+  padding: 0;
+}
+.mat-content {
+  margin-top: 28px;
+}
+.mdc-button.mat-mdc-button {
+  background-color: #575780;
+  color: #fff;
+}
+.mat-expansion-panel-header {
+  height: 64px;
+  background-color: transparent !important;
+}
+.btn-check:focus + .btn-danger,
+.btn-danger:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+.container-detail {
+  max-width: 768px;
+  padding: 2.7rem 1rem 1.7rem 1rem;
+}
+.rounded-wrapper {
+  margin-left: 1.5rem;
+}
+.name-fieldset {
+  margin: 0 1.5rem 0 1.5rem;
+}
+.btn {
+  margin-left: 1.5rem;
+}

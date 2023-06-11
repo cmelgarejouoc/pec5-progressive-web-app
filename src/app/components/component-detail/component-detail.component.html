@@ -1,0 +1,53 @@
+<div class="container-detail container mt-5 mb-5">
+  <div
+    *ngIf="image"
+    class="row animate__animated animate__bounce animate__fadeIn"
+  >
+    <div class="col-md-9">
+      <fieldset class="name-fieldset">
+        <legend>Name</legend>
+
+        <h3>{{ image.name }}</h3>
+      </fieldset>
+
+      <div class="rounded-wrapper mt-4">
+        <img
+          class="rounded"
+          src="{{ image.image }}"
+          alt="Image of {{ image.name }}"
+        />
+      </div>
+
+      <mat-accordion>
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header class="mt-2">
+            <button mat-button class="btn btn-danger">Show all details</button>
+          </mat-expansion-panel-header>
+
+          <fieldset>
+            <p><strong>Gender:</strong> {{ image.gender }}</p>
+            <p><strong>Species:</strong> {{ image.species }}</p>
+            <p>
+              <strong>Type:</strong>
+              {{ image.type ? image.type : "[no data]" }}
+            </p>
+            <p><strong>Status:</strong> {{ image.status }}</p>
+            <p>
+              <strong>First appearance: <br /></strong>
+              {{
+                image?.episode?.[0] ?? "No episodes"
+              }}
+            </p>
+            <p><strong>Location:</strong> {{ image.location.name }}</p>
+            <p><strong>Created:</strong> {{ image.created }}</p>
+            <p><strong>Public endpoint:</strong> {{ image.url }}</p>
+          </fieldset>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+
+    <div class="col-md-3 mt-3">
+      <a class="btn btn-danger" routerLink="/">Back</a>
+    </div>
+  </div>
+</div>

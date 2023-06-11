@@ -1,0 +1,38 @@
+<div class="container mt-5 mb-5">
+  <h1>Rick and Morty: 20 characters from episodies</h1>
+
+  <div class="spinner-wrapper" *ngIf="showSpinner">
+    <mat-spinner class="spinner"></mat-spinner>
+  </div>
+
+  <div *ngIf="!showSpinner">
+    <div class="text-end">
+      <button
+        mat-icon-button
+        color="primary"
+        (click)="changeView('card')"
+        [disabled]="currentView === 'card'"
+        [ngClass]="{ 'opacity-25': currentView === 'grid' }"
+      >
+        <mat-icon>view_module</mat-icon>
+      </button>
+      <button
+        mat-icon-button
+        color="primary"
+        (click)="changeView('grid')"
+        [disabled]="currentView === 'grid'"
+        [ngClass]="{ 'opacity-25': currentView === 'card' }"
+      >
+        <mat-icon>view_list</mat-icon>
+      </button>
+    </div>
+
+    <div class="list-group" *ngIf="currentView === 'grid'">
+      <app-grid [images]="images"></app-grid>
+    </div>
+
+    <div *ngIf="currentView === 'card'">
+      <app-card [images]="images"></app-card>
+    </div>
+  </div>
+</div>

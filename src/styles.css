@@ -1,1 +1,69 @@
+@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #333;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+h1 {
+  margin-bottom: 1rem;
+}
+.container {
+  background-color: #6fabdf;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 1080px;
+}
+.list-group {
+  max-height: 40rem;
+  overflow-y: scroll;
+}
+.rounded-wrapper {
+  border: 1px solid #fff;
+  padding: 0.1rem;
+  width: 84%;
+  border-radius: 5px;
+}
+.rounded {
+  width: 100%;
+  max-width: 100%;
+}
+fieldset {
+  margin-top: 1rem;
+  border: 1px solid #fff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+legend {
+  padding: 0 1rem;
+  color: #fff;
+  float: none;
+  width: auto;
+  margin-bottom: 0;
+  font-size: 1.3rem;
+}
+p {
+  margin-bottom: 0.3rem;
+}
+.spinner-wrapper {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (min-width: 680px) {
+  .rounded-wrapper {
+    width: 48%;
+  }
+}

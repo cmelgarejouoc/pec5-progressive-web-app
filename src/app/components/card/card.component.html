@@ -1,0 +1,27 @@
+<div class="row">
+  <div *ngFor="let image of images" class="col-sm-4">
+    <a
+      *ngIf="image"
+      [routerLink]="['/detail', image.id]"
+      class="animate__animated animate__bounce animate__fadeIn text-decoration-none"
+    >
+      <!-- ANGULAR MATERIAL CARD -->
+      <mat-card class="card mb-4">
+        <mat-card-header>
+          <mat-card-title class="card-name"
+            >[{{ image.id }}] {{ image.name }}</mat-card-title
+          >
+          <mat-card-subtitle class="card-species">{{
+            image.species
+          }}</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="{{ image.image }}"
+          alt="Image of {{ image.name }}"
+          class="card-image"
+        />
+      </mat-card>
+    </a>
+  </div>
+</div>
