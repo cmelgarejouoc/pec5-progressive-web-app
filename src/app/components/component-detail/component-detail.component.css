@@ -56,6 +56,9 @@ legend {
   margin-bottom: 0;
   font-size: 1.3rem;
 }
+p {
+  word-break: break-word;
+}
 
 @media only screen and (min-width: 680px) {
   .rounded-wrapper {
