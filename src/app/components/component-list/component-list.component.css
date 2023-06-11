@@ -2,9 +2,12 @@
   opacity: 0.25;
 }
 .list-group {
-  max-height: 30rem;
+  max-height: 23rem;
   overflow-y: scroll;
   overflow-x: hidden;
+}
+p {
+  word-break: break-word;
 }
 
 @media only screen and (min-width: 680px) {
