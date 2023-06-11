@@ -1,6 +1,8 @@
 {
   "name": "pec5-progressive-web-app",
-  "short_name": "pec5-progressive-web-app",
+  "short_name": "pec5-pwa",
+  "description": "PWA about 20 characters of the series Rick and Morty",
+  "lang": "en-US",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
